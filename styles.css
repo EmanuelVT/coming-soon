@@ -21,11 +21,16 @@
     box-sizing: inherit;
 }
 
+html {
+    height: 100%;
+}
+
 
 body {
     background-color: #FBFBFB;
     font-family: "AdiHaus";
     box-sizing: border-box;
+    min-width: 260px;
 
 }
 
@@ -73,6 +78,7 @@ body {
     text-align: center;
     padding: 0 2rem;
     line-height: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .landing-input {
@@ -94,4 +100,98 @@ button {
     color: #FFF;
     border-width: 1px;
     border-radius: 3px;
+}
+
+
+@media (min-width: 800px) {
+
+    body {
+        height: 100%;
+        padding: 1rem 9rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-image: url("https://assets.codepen.io/6060109/destop-bg.png");
+        background-size: cover;
+    }
+
+    .container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .top-bar {
+        text-align: initial;
+        padding-bottom: 0rem;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .landing-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .landing-text h1 {
+        text-align: initial;
+        width: 20rem;
+        font-size: 4rem;
+    }
+
+    .landing-text p {
+        text-align: initial;
+        padding: 0;
+        width: 25rem;
+
+    }
+
+    .landing-input {
+        justify-content: flex-start;
+    }
+
+    .landing-input input {
+        width: 20rem;
+    }
+
+    button {
+        width: 94px;
+    }
+
+    .red-notation {
+        padding-bottom: 0;
+    }
+
+    .hero-desktop {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background-image: url('https://assets.codepen.io/6060109/athlete-big.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 23% 100%);
+
+    }
+
+    .jumbo-image {
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 23% 100%);
+    }
+}
+
+
+@media (max-width: 970px) {
+    .landing-text p {
+        width: 100%;
+    }
 }
